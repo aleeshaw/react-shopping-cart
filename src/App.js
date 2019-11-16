@@ -21,10 +21,12 @@ function App() {
     console.log(item);
   };
   
-  const removeItem = item => {
-    // setCart(cart => [...cart.filter(item.id !== this.item.id)])
-    console.log(item);
-  }
+  const removeItem = removedItem => {
+    const altCart = cart.filter(item => item.id !== removedItem.id);
+    console.log(altCart);
+    setCart(altCart);
+  };
+//TODO fix bug with removing multiple items...has to do with identical item ids when adding multiples of the same product.
 
 	return (
     <ProductContext.Provider 
