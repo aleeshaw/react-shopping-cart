@@ -18,12 +18,12 @@ function App() {
     // add the given item to the cart
     setCart(cart => [...cart, item]);
     //take cart original state, add new item to the entirety of cart contents...
-    console.log(item);
+    //console.log(item);
   };
   
   const removeItem = removedItem => {
     const altCart = cart.filter(item => item.id !== removedItem.id);
-    console.log(altCart);
+    //console.log(altCart);
     setCart(altCart);
   };
 //TODO fix bug with removing multiple items...has to do with identical item ids when adding multiples of the same product.
